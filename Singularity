@@ -22,7 +22,6 @@ Stage: build
     tar xvfa julia-1.1.1-linux-x86_64.tar.gz
     rm julia-1.1.1-linux-x86_64.tar.gz
     ln -s /julia-1.1.1/bin/julia /usr/local/bin/julia
-    julia add-packages.jl
 
     # install python
     CONDA_INSTALL_PATH="/usr/local/anaconda3"
@@ -37,6 +36,9 @@ Stage: build
     conda env create -f ./environment.yml
     conda clean -tipsy
     conda init bash
+
+    # install julia packages
+    julia add-packages.jl
     
 %runscript
     exec "$@"
