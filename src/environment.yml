@@ -1,0 +1,27 @@
+name: py3
+channels:
+    - defaults
+    - conda-forge
+dependencies:
+    - python=3.6    # Python version 3.6
+    - boto3
+    - bottleneck    # C-optimized array functions for NumPy
+    - cartopy       # Geographic plotting toolkit
+    - cython        # Transpile Python->C
+    - dask          # Parallel processing library
+    - future        # Python 2/3 compatibility
+    - h5py          # Wrapper for HDF5
+    - ipython       # IPython interpreter and tools
+    - jupyter       # Jupyter federation architecture
+    - jupyterlab    # next-generation Jupyter
+    - matplotlib    # 2D plotting library
+    - numpy         # N-d array and numerics
+    - obspy         # Seismology in Python
+    - pandas        # Labeled array library
+    - scipy         # Common math/stats/science functions
+    - scikit-learn  # Machine learning library
+    - statsmodels   # Regression/modeling toolkit
+    - seaborn       # Statistical visualizations
+    - six           # Python 2/3 compatibility
+    - tqdm          # Nice progressbar for longer computations
+    - pip
