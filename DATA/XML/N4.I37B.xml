@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+ <FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iris="http://www.fdsn.org/xml/station/1/iris" xsi:schemaLocation="http://www.fdsn.org/xml/station/1 http://www.fdsn.org/xml/station/fdsn-station-1.1.xsd" schemaVersion="1.1">
+  <Source>IRIS-DMC</Source>
+  <Sender>IRIS-DMC</Sender>
+  <Module>IRIS WEB SERVICE: fdsnws-station | version: 1.1.45</Module>
+  <ModuleURI></ModuleURI>
+  <Created>2020-04-07T05:26:41</Created>
+  <Network code="N4" startDate="2013-01-01T00:00:00" restrictedStatus="open">
+   <Description>Central and Eastern US Network (CEUSN)</Description>
+   <TotalNumberStations>177</TotalNumberStations>
+   <SelectedNumberStations>1</SelectedNumberStations>
+   <Station code="I37B" startDate="2014-03-15T00:00:00" restrictedStatus="open" iris:alternateNetworkCodes="_CEUSN,.GREG,_REALTIME,.UNRESTRICTED,_US-REGIONAL,_US-TA-ADOPTED">
+    <Latitude>44.0149</Latitude>
+    <Longitude>-93.4003</Longitude>
+    <Elevation>354.0</Elevation>
+    <Site>
+     <Name>Waseca, MN, USA</Name>
+    </Site>
+    <CreationDate>2014-03-15T00:00:00</CreationDate>
+    <TotalNumberChannels>58</TotalNumberChannels>
+    <SelectedNumberChannels>1</SelectedNumberChannels>
+    <Channel code="LHZ" locationCode="00" startDate="2019-03-14T23:17:00" restrictedStatus="open">
+     <Comment>
+      <Value>Install a configured logger and its instruments [SENSOR::CMG-3T::T3H98], [LOGGER::Q330::1577]</Value>
+      <BeginEffectiveTime>2019-03-14T23:17:00</BeginEffectiveTime>
+     </Comment>
+     <Latitude>44.0149</Latitude>
+     <Longitude>-93.4003</Longitude>
+     <Elevation>354</Elevation>
+     <Depth>0</Depth>
+     <Azimuth>0</Azimuth>
+     <Dip>-90</Dip>
+     <Type>CONTINUOUS</Type>
+     <Type>GEOPHYSICAL</Type>
+     <SampleRate>1E00</SampleRate>
+     <Sensor>
+      <Type>GURALP</Type>
+      <Description>Velocity Transducer</Description>
+      <Manufacturer>GURALP</Manufacturer>
+      <Model>CMG-3T</Model>
+      <SerialNumber>T3H98</SerialNumber>
+     </Sensor>
+     <Equipment>
+      <Type>QUANTERRA</Type>
+      <Manufacturer>QUANTERRA</Manufacturer>
+      <Model>Q330</Model>
+      <SerialNumber>1577</SerialNumber>
+     </Equipment>
+     <Response>
+     <InstrumentSensitivity>
+       <Value>6.19079E8</Value>
+       <Frequency>0.02</Frequency>
+       <InputUnits>
+         <Name>m/s</Name>
+         <Description>Velocity in meters per second</Description>
+       </InputUnits>
+       <OutputUnits>
+         <Name>counts</Name>
+         <Description>Digital Count in Digital counts</Description>
+       </OutputUnits>
+     </InstrumentSensitivity>
+      <Stage number="1">
+      <PolesZeros name="CMG3T_120_1500">
+        <Description>IRIS-NRL</Description>
+        <InputUnits>
+          <Name>m/s</Name>
+          <Description>Velocity in meters per second</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>V</Name>
+          <Description>Voltage in Volts</Description>
+        </OutputUnits>
+        <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+        <NormalizationFactor>5.79871E8</NormalizationFactor>
+        <NormalizationFrequency>0.02</NormalizationFrequency>
+        <Zero number="0">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="1">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Pole number="0">
+          <Real>-0.037008</Real>
+          <Imaginary>-0.037008</Imaginary>
+        </Pole>
+        <Pole number="1">
+          <Real>-0.037008</Real>
+          <Imaginary>0.037008</Imaginary>
+        </Pole>
+        <Pole number="2">
+          <Real>-502.65</Real>
+          <Imaginary>0.0</Imaginary>
+        </Pole>
+        <Pole number="3">
+          <Real>-1005.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Pole>
+        <Pole number="4">
+          <Real>-1131.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Pole>
+      </PolesZeros>
+      <Decimation>
+        <InputSampleRate>1.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1476.0</Value>
+        <Frequency>0.02</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="2">
+      <Decimation>
+        <InputSampleRate>1.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.02</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="3">
+      <Coefficients>
+        <InputUnits>
+          <Name>V</Name>
+          <Description>Voltage in Volts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Count in Digital counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>1.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>419430.0</Value>
+        <Frequency>0.02</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="4">
+      <FIR name="Q330_SR_1_1_all_4">
+        <Description>IRIS-NRL</Description>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Count in Digital counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Count in Digital counts</Description>
+        </OutputUnits>
+        <Symmetry>NONE</Symmetry>
+        <NumeratorCoefficient i="1">-1.22004E-16</NumeratorCoefficient>
+        <NumeratorCoefficient i="2">3.37278E-11</NumeratorCoefficient>
+        <NumeratorCoefficient i="3">-3.19094E-7</NumeratorCoefficient>
+        <NumeratorCoefficient i="4">1.26313E-6</NumeratorCoefficient>
+        <NumeratorCoefficient i="5">-1.48491E-5</NumeratorCoefficient>
+        <NumeratorCoefficient i="6">0.00332199</NumeratorCoefficient>
+        <NumeratorCoefficient i="7">0.00108323</NumeratorCoefficient>
+        <NumeratorCoefficient i="8">-0.00624045</NumeratorCoefficient>
+        <NumeratorCoefficient i="9">0.0126566</NumeratorCoefficient>
+        <NumeratorCoefficient i="10">-0.0157663</NumeratorCoefficient>
+        <NumeratorCoefficient i="11">0.00956762</NumeratorCoefficient>
+        <NumeratorCoefficient i="12">0.010711</NumeratorCoefficient>
+        <NumeratorCoefficient i="13">-0.0456425</NumeratorCoefficient>
+        <NumeratorCoefficient i="14">0.0897523</NumeratorCoefficient>
+        <NumeratorCoefficient i="15">-0.132437</NumeratorCoefficient>
+        <NumeratorCoefficient i="16">0.155289</NumeratorCoefficient>
+        <NumeratorCoefficient i="17">0.81237</NumeratorCoefficient>
+        <NumeratorCoefficient i="18">0.185415</NumeratorCoefficient>
+        <NumeratorCoefficient i="19">-0.140609</NumeratorCoefficient>
+        <NumeratorCoefficient i="20">0.0897083</NumeratorCoefficient>
+        <NumeratorCoefficient i="21">-0.0424397</NumeratorCoefficient>
+        <NumeratorCoefficient i="22">0.00714001</NumeratorCoefficient>
+        <NumeratorCoefficient i="23">0.0121051</NumeratorCoefficient>
+        <NumeratorCoefficient i="24">-0.0169307</NumeratorCoefficient>
+        <NumeratorCoefficient i="25">0.0127735</NumeratorCoefficient>
+        <NumeratorCoefficient i="26">-0.00586424</NumeratorCoefficient>
+        <NumeratorCoefficient i="27">6.45177E-4</NumeratorCoefficient>
+        <NumeratorCoefficient i="28">0.00348713</NumeratorCoefficient>
+        <NumeratorCoefficient i="29">-8.53058E-5</NumeratorCoefficient>
+        <NumeratorCoefficient i="30">2.29713E-6</NumeratorCoefficient>
+        <NumeratorCoefficient i="31">-2.2583E-7</NumeratorCoefficient>
+      </FIR>
+      <Decimation>
+        <InputSampleRate>1.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>16.0</Delay>
+        <Correction>16.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.02</Frequency>
+      </StageGain>
+
+      </Stage>
+     </Response>
+    </Channel>
+   </Station>
+  </Network>
+ </FDSNStationXML>

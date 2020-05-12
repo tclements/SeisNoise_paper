@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+ <FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iris="http://www.fdsn.org/xml/station/1/iris" xsi:schemaLocation="http://www.fdsn.org/xml/station/1 http://www.fdsn.org/xml/station/fdsn-station-1.1.xsd" schemaVersion="1.1">
+  <Source>IRIS-DMC</Source>
+  <Sender>IRIS-DMC</Sender>
+  <Module>IRIS WEB SERVICE: fdsnws-station | version: 1.1.45</Module>
+  <ModuleURI></ModuleURI>
+  <Created>2020-04-07T17:05:01</Created>
+  <Network code="GS" startDate="1980-01-01T00:00:00" restrictedStatus="open">
+   <Description>US Geological Survey Networks ()</Description>
+   <TotalNumberStations>579</TotalNumberStations>
+   <SelectedNumberStations>1</SelectedNumberStations>
+   <Station code="ANMX" startDate="2018-02-20T00:00:00" restrictedStatus="open" iris:alternateNetworkCodes="_REALTIME,.UNRESTRICTED,_US-REGIONAL">
+    <Latitude>34.945902</Latitude>
+    <Longitude>-106.457038</Longitude>
+    <Elevation>1839.9</Elevation>
+    <Site>
+     <Name>ANMO Experimental</Name>
+    </Site>
+    <CreationDate>2018-02-20T00:00:00</CreationDate>
+    <TotalNumberChannels>21</TotalNumberChannels>
+    <SelectedNumberChannels>1</SelectedNumberChannels>
+    <Channel code="LHZ" locationCode="00" startDate="2019-09-09T12:00:00" restrictedStatus="open">
+     <Comment>
+      <Value>Install a configured logger and its instruments [SENSOR::TRILLIUM 360</Value>
+      <BeginEffectiveTime>2019-09-09T12:00:00</BeginEffectiveTime>
+     </Comment>
+     <Comment>
+      <Value>Update sensor location/orientation [SENSOR::TRILLIUM 360 BOREHOLE::000</Value>
+      <BeginEffectiveTime>2019-09-09T12:00:00</BeginEffectiveTime>
+     </Comment>
+     <Latitude>34.945902</Latitude>
+     <Longitude>-106.457038</Longitude>
+     <Elevation>1839.9</Elevation>
+     <Depth>52</Depth>
+     <Azimuth>0</Azimuth>
+     <Dip>-90</Dip>
+     <Type>CONTINUOUS</Type>
+     <Type>GEOPHYSICAL</Type>
+     <SampleRate>1E00</SampleRate>
+     <ClockDrift>0E00</ClockDrift>
+     <Sensor>
+      <Description>TRILLIUM 360 BOREHOLE,Velocity Transducer,NANOMETR</Description>
+     </Sensor>
+     <Response>
+     <InstrumentSensitivity>
+       <Value>3.32189E9</Value>
+       <Frequency>0.02</Frequency>
+       <InputUnits>
+         <Name>m/s</Name>
+         <Description>Velocity in meters per second</Description>
+       </InputUnits>
+       <OutputUnits>
+         <Name>count</Name>
+         <Description>Digital Count in Digital counts</Description>
+       </OutputUnits>
+     </InstrumentSensitivity>
+      <Stage number="1">
+      <PolesZeros>
+        <InputUnits>
+          <Name>m/s</Name>
+          <Description>Velocity in meters per second</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>V</Name>
+          <Description>Voltage in Volts</Description>
+        </OutputUnits>
+        <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+        <NormalizationFactor>4.1955501418112614E17</NormalizationFactor>
+        <NormalizationFrequency>0.019999999552965164</NormalizationFrequency>
+        <Zero number="0">
+          <Real minusError="0.0" plusError="0.0">0.0</Real>
+          <Imaginary minusError="0.0" plusError="0.0">0.0</Imaginary>
+        </Zero>
+        <Zero number="1">
+          <Real minusError="0.0" plusError="0.0">0.0</Real>
+          <Imaginary minusError="0.0" plusError="0.0">0.0</Imaginary>
+        </Zero>
+        <Zero number="2">
+          <Real minusError="0.0" plusError="0.0">-31.6299991607666</Real>
+          <Imaginary minusError="0.0" plusError="0.0">0.0</Imaginary>
+        </Zero>
+        <Zero number="3">
+          <Real minusError="0.0" plusError="0.0">-143.44000244140625</Real>
+          <Imaginary minusError="0.0" plusError="0.0">0.0</Imaginary>
+        </Zero>
+        <Zero number="4">
+          <Real minusError="0.0" plusError="0.0">-350.0</Real>
+          <Imaginary minusError="0.0" plusError="0.0">0.0</Imaginary>
+        </Zero>
+        <Zero number="5">
+          <Real minusError="0.0" plusError="0.0">-3100.0</Real>
+          <Imaginary minusError="0.0" plusError="0.0">0.0</Imaginary>
+        </Zero>
+        <Pole number="0">
+          <Real minusError="0.0" plusError="0.0">-0.012238999828696251</Real>
+          <Imaginary minusError="0.0" plusError="0.0">-0.012315000407397747</Imaginary>
+        </Pole>
+        <Pole number="1">
+          <Real minusError="0.0" plusError="0.0">-0.012238999828696251</Real>
+          <Imaginary minusError="0.0" plusError="0.0">0.012315000407397747</Imaginary>
+        </Pole>
+        <Pole number="2">
+          <Real minusError="0.0" plusError="0.0">-33.38999938964844</Real>
+          <Imaginary minusError="0.0" plusError="0.0">0.0</Imaginary>
+        </Pole>
+        <Pole number="3">
+          <Real minusError="0.0" plusError="0.0">-142.0</Real>
+          <Imaginary minusError="0.0" plusError="0.0">0.0</Imaginary>
+        </Pole>
+        <Pole number="4">
+          <Real minusError="0.0" plusError="0.0">-155.8000030517578</Real>
+          <Imaginary minusError="0.0" plusError="0.0">-252.8000030517578</Imaginary>
+        </Pole>
+        <Pole number="5">
+          <Real minusError="0.0" plusError="0.0">-155.8000030517578</Real>
+          <Imaginary minusError="0.0" plusError="0.0">252.8000030517578</Imaginary>
+        </Pole>
+        <Pole number="6">
+          <Real minusError="0.0" plusError="0.0">-2120.0</Real>
+          <Imaginary minusError="0.0" plusError="0.0">0.0</Imaginary>
+        </Pole>
+        <Pole number="7">
+          <Real minusError="0.0" plusError="0.0">-6700.0</Real>
+          <Imaginary minusError="0.0" plusError="0.0">-1300.0</Imaginary>
+        </Pole>
+        <Pole number="8">
+          <Real minusError="0.0" plusError="0.0">-6700.0</Real>
+          <Imaginary minusError="0.0" plusError="0.0">1300.0</Imaginary>
+        </Pole>
+        <Pole number="9">
+          <Real minusError="0.0" plusError="0.0">-4900.0</Real>
+          <Imaginary minusError="0.0" plusError="0.0">-5100.0</Imaginary>
+        </Pole>
+        <Pole number="10">
+          <Real minusError="0.0" plusError="0.0">-4900.0</Real>
+          <Imaginary minusError="0.0" plusError="0.0">5100.0</Imaginary>
+        </Pole>
+      </PolesZeros>
+      <StageGain>
+        <Value>1980.0</Value>
+        <Frequency>0.02</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="2">
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.02</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="3">
+      <Coefficients>
+        <InputUnits>
+          <Name>V</Name>
+          <Description>Voltage in Volts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>count</Name>
+          <Description>Digital Count in Digital counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>1.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1677720.0</Value>
+        <Frequency>0.02</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="4">
+      <FIR name="Q330_SR_1_1_all_4">
+        <InputUnits>
+          <Name>count</Name>
+          <Description>Digital Count in Digital counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>count</Name>
+          <Description>Digital Count in Digital counts</Description>
+        </OutputUnits>
+        <Symmetry>NONE</Symmetry>
+        <NumeratorCoefficient>-1.22004E-16</NumeratorCoefficient>
+        <NumeratorCoefficient>3.37278E-11</NumeratorCoefficient>
+        <NumeratorCoefficient>-3.19094E-7</NumeratorCoefficient>
+        <NumeratorCoefficient>1.26313E-6</NumeratorCoefficient>
+        <NumeratorCoefficient>-1.48491E-5</NumeratorCoefficient>
+        <NumeratorCoefficient>0.00332199</NumeratorCoefficient>
+        <NumeratorCoefficient>0.00108323</NumeratorCoefficient>
+        <NumeratorCoefficient>-0.00624045</NumeratorCoefficient>
+        <NumeratorCoefficient>0.0126566</NumeratorCoefficient>
+        <NumeratorCoefficient>-0.0157663</NumeratorCoefficient>
+        <NumeratorCoefficient>0.00956762</NumeratorCoefficient>
+        <NumeratorCoefficient>0.010711</NumeratorCoefficient>
+        <NumeratorCoefficient>-0.0456425</NumeratorCoefficient>
+        <NumeratorCoefficient>0.0897523</NumeratorCoefficient>
+        <NumeratorCoefficient>-0.132437</NumeratorCoefficient>
+        <NumeratorCoefficient>0.155289</NumeratorCoefficient>
+        <NumeratorCoefficient>0.81237</NumeratorCoefficient>
+        <NumeratorCoefficient>0.185415</NumeratorCoefficient>
+        <NumeratorCoefficient>-0.140609</NumeratorCoefficient>
+        <NumeratorCoefficient>0.0897083</NumeratorCoefficient>
+        <NumeratorCoefficient>-0.0424397</NumeratorCoefficient>
+        <NumeratorCoefficient>0.00714001</NumeratorCoefficient>
+        <NumeratorCoefficient>0.0121051</NumeratorCoefficient>
+        <NumeratorCoefficient>-0.0169307</NumeratorCoefficient>
+        <NumeratorCoefficient>0.0127735</NumeratorCoefficient>
+        <NumeratorCoefficient>-0.00586424</NumeratorCoefficient>
+        <NumeratorCoefficient>6.45177E-4</NumeratorCoefficient>
+        <NumeratorCoefficient>0.00348713</NumeratorCoefficient>
+        <NumeratorCoefficient>-8.53058E-5</NumeratorCoefficient>
+        <NumeratorCoefficient>2.29713E-6</NumeratorCoefficient>
+        <NumeratorCoefficient>-2.2583E-7</NumeratorCoefficient>
+      </FIR>
+      <Decimation>
+        <InputSampleRate>1.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>16.0</Delay>
+        <Correction>16.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.02</Frequency>
+      </StageGain>
+
+      </Stage>
+     </Response>
+    </Channel>
+   </Station>
+  </Network>
+ </FDSNStationXML>
