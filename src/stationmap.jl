@@ -5,7 +5,7 @@
 using SeisNoise, Libdl, Glob, GMT
 push!(Libdl.DL_LOAD_PATH, expanduser("~/miniconda3/lib/"))
 
-CORRDIR = expanduser("~/Clements-Denolle-2020/SINGLECORR")
+CORRDIR = expanduser("~/SeisNoise_paper/SINGLECORR")
 files = glob("*",CORRDIR)
 
 # load first file and allocate
@@ -27,4 +27,4 @@ end
 coast(region=:d, proj=:Winkel, frame=:g, res=:low, area=10000, land=:seashell4,
                  water=:skyblue, figsize=18, shore=:black)
 scatter!(lon,lat,fill=:gold,marker=:triangle,markeredgecolor=:black,fmt=:png,
-         savefig=expanduser("~/Clements-Denolle-2020/stationmap.png"))
+         savefig=expanduser("~/SeisNoise_paper/stationmap.png"))

@@ -8,9 +8,9 @@ cc_len, cc_step = 2^15, 26768
 freqmin = 0.003
 freqmax = 0.005
 maxlag = 12000.
-YEARSEIS = expanduser("~/Clements-Denolle-2020/DATA/YEARSEIS")
-SINGLECORR = expanduser("~/Clements-Denolle-2020/SINGLECORR")
-XML = expanduser("~/Clements-Denolle-2020/DATA/XML")
+YEARSEIS = expanduser("~/SeisNoise_paper/DATA/YEARSEIS")
+SINGLECORR = expanduser("~/SeisNoise_paper/SINGLECORR")
+XML = expanduser("~/SeisNoise_paper/DATA/XML")
 files = glob("*seisio",YEARSEIS)
 N = length(files)
 

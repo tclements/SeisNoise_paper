@@ -5,7 +5,7 @@ using Pkg
 # add following packages
 pkgs = ["AWSCore", "AWSS3", "DataFrames", "CSV", "Glob", "JLD2",
         "Plots", "CuArrays", "CUDAnative", "CUDAdrv", "BenchmarkTools",
-        "PyCall", "Conda"]
+        "PyCall", "Conda","StatsPlots"]
 for p in pkgs
       Pkg.add(p)
 end

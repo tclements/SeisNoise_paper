@@ -8,9 +8,9 @@ cc_len, cc_step = 2^15, 26768
 freqmin = 0.003
 freqmax = 0.005
 maxlag = 12000.
-splits = glob("*",joinpath(expanduser("~/Clements-Denolle-2020/DATA/SPLITSEIS"),string(Npersplit)))
-SPLITCORR = joinpath(expanduser("~/Clements-Denolle-2020/CORR/SPLITSEIS"),string(Npersplit))
-XML = expanduser("~/Clements-Denolle-2020/DATA/XML")
+splits = glob("*",joinpath(expanduser("~/SeisNoise_paper/DATA/SPLITSEIS"),string(Npersplit)))
+SPLITCORR = joinpath(expanduser("~/SeisNoise_paper/CORR/SPLITSEIS"),string(Npersplit))
+XML = expanduser("~/SeisNoise_paper/DATA/XML")
 
 if !isdir(SPLITCORR)
     mkpath(SPLITCORR)

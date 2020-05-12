@@ -2,15 +2,15 @@ using SeisIO, SeisNoise, Dates, Glob, BenchmarkTools, StatsPlots, Statistics
 using CuArrays, PyCall, Plots.PlotMeasures, Printf
 ## This is a test of single core Julia CPU performace vs GPU performance vs python
 # for one year of cross-correlation between two LHZ stations
-# numpy, scipy and obspy must be installed via Conda for this benchmark 
+# numpy, scipy and obspy must be installed via Conda for this benchmark
 
 fs = 1.
 cc_len, cc_step = 2^15, 26768
 freqmin = 0.003
 freqmax = 0.005
 maxlag = 12000.
-file1 = expanduser("~/Clements-Denolle-2020/YEARSAC/2019.001.00.00.00.000.BK.CMB.00.LHZ.R.SAC")
-file2 = expanduser("~/Clements-Denolle-2020/YEARSAC/2019.001.00.00.00.000.US.WVOR.00.LHZ.R.SAC")
+file1 = expanduser("~/SeisNoise_paper/YEARSAC/2019.001.00.00.00.000.BK.CMB.00.LHZ.R.SAC")
+file2 = expanduser("~/SeisNoise_paper/YEARSAC/2019.001.00.00.00.000.US.WVOR.00.LHZ.R.SAC")
 
 # function for cross-correlation on the CPU
 function CPU_CC(file1,file2,cc_len,cc_step,fs,freqmin,freqmax,maxlag)
@@ -457,4 +457,4 @@ println("CPU vs Python Speedup: $(@sprintf("%.2f",postsci/postcpu))x")
 groupedbar(nam, times , group = ctg,xlabel = "Processing", ylabel = "Time [ms]",
         bar_width = 0.67, lw = 0, framestyle = :box,color=colors,legend=:best,
         size=(800,500),left_margin=10mm,bottom_margin=10mm,dpi=1000)
-png(expanduser("~/Clements-Denolle-2020/CPU-GPU-BENCHMARK"))
+png(expanduser("~/SeisNoise_paper/CPU-GPU-BENCHMARK"))

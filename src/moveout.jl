@@ -1,6 +1,9 @@
+# this script generates the moveout plot for all cross-corrlations
+# in the benchmarking test 
+
 using SeisNoise, Glob, Plots, Statistics, Plots.PlotMeasures
 # plot all correlations
-CORRDIR = expanduser("~/SEISNOISE-TEST/SINGLECORR")
+CORRDIR = expanduser("~/SeisNoise_paper/SINGLECORR")
 files = glob("*",CORRDIR)
 freqmin = 1 / 50
 freqmax = 1 / 30
@@ -80,4 +83,4 @@ for ii = 1:length(dists)
                 bottom_margin=-20px,right_margin=25px)
 end
 p
-png(expanduser("~/SEISNOISE-TEST/LHZ-moveout"))
+png(expanduser("~/SeisNoise_paper/LHZ-moveout"))

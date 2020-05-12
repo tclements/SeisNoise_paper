@@ -12,10 +12,10 @@ freqmin = 0.003
 freqmax = 0.005
 maxlag = 12000.
 Npersplit = 25
-splits = glob("*",joinpath(expanduser("~/Clements-Denolle-2020/DATA/SPLITSEIS"),string(Npersplit)))
+splits = glob("*",joinpath(expanduser("~/SeisNoise_paper/DATA/SPLITSEIS"),string(Npersplit)))
 Nsplits = length(splits)
-SPLITCORR = joinpath(expanduser("~/Clements-Denolle-2020/CORR/SPLITSEIS"),string(Npersplit))
-XML = expanduser("~/Clements-Denolle-2020/DATA/XML")
+SPLITCORR = joinpath(expanduser("~/SeisNoise_paper/CORR/SPLITSEIS"),string(Npersplit))
+XML = expanduser("~/SeisNoise_paper/DATA/XML")
 N = length(splits)
 
 if !isdir(SPLITCORR)

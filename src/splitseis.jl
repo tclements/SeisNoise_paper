@@ -5,8 +5,8 @@
 # using Npersplit = 25 gives 1,177 \ 25 = 48 splits
 using SeisIO, Glob, Dates
 
-files = glob("*SAC",expanduser("~/Clements-Denolle-2020/DATA/YEARSAC/"))
-OUTDIR = expanduser("~/Clements-Denolle-2020/DATA/SPLITSEIS")
+files = glob("*SAC",expanduser("~/SeisNoise_paper/DATA/YEARSAC/"))
+OUTDIR = expanduser("~/SeisNoise_paper/DATA/SPLITSEIS")
 cc_len, cc_step = 2^15, 26768
 Npersplit = 25  # number of time-windows per split
 starttime = DateTime(2019,1,1)

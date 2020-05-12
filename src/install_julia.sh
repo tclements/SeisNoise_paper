@@ -15,5 +15,5 @@ else
     echo PATH=\$PATH:~/julia-1.4.1/bin/ >> ~/.bashrc
 fi
 source ~/.bashrc
-julia ~/Clements-Denolle-2020/src/add-packages.jl
+julia ~/SeisNoise_paper/src/add-packages.jl
 cd
