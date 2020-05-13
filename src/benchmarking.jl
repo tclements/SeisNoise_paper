@@ -9,8 +9,8 @@ cc_len, cc_step = 2^15, 26768
 freqmin = 0.003
 freqmax = 0.005
 maxlag = 12000.
-file1 = expanduser("~/SeisNoise_paper/YEARSAC/2019.001.00.00.00.000.BK.CMB.00.LHZ.R.SAC")
-file2 = expanduser("~/SeisNoise_paper/YEARSAC/2019.001.00.00.00.000.US.WVOR.00.LHZ.R.SAC")
+file1 = expanduser("~/SeisNoise_paper/DATA/YEARSAC/2019.001.00.00.00.000.BK.CMB.00.LHZ.R.SAC")
+file2 = expanduser("~/SeisNoise_paper/DATA/YEARSAC/2019.001.00.00.00.000.US.WVOR.00.LHZ.R.SAC")
 
 # function for cross-correlation on the CPU
 function CPU_CC(file1,file2,cc_len,cc_step,fs,freqmin,freqmax,maxlag)
