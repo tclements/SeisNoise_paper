@@ -1,5 +1,5 @@
 using SeisIO, SeisNoise, Dates, Glob, BenchmarkTools, StatsPlots, Statistics
-using CuArrays, PyCall, Plots.PlotMeasures, Printf
+using CuArrays, PyCall, Plots.PlotMeasures, Printf, HTTP, DelimitedFiles
 ## This is a test of single core Julia CPU performace vs GPU performance vs python
 # for one year of cross-correlation between two LHZ stations
 # numpy, scipy and obspy must be installed via Conda for this benchmark
@@ -9,8 +9,28 @@ cc_len, cc_step = 2^15, 26768
 freqmin = 0.003
 freqmax = 0.005
 maxlag = 12000.
-file1 = expanduser("~/SeisNoise_paper/DATA/YEARSAC/2019.001.00.00.00.000.BK.CMB.00.LHZ.R.SAC")
-file2 = expanduser("~/SeisNoise_paper/DATA/YEARSAC/2019.001.00.00.00.000.US.WVOR.00.LHZ.R.SAC")
+file1 = expanduser("~/SeisNoise_paper/DATA/YEARSAC/2019.001.00.00.00.000.BK.BDM.00.LHZ.R.SAC")
+file2 = expanduser("~/SeisNoise_paper/DATA/YEARSAC/2019.001.00.00.00.000.BK.BKS.00.LHZ.R.SAC")
+
+# check if these YEARSAC directory exist, if not download from zenodo
+if !isdir(expanduser("~/SeisNoise_paper/DATA/YEARSAC"))
+    mkpath(expanduser("~/SeisNoise_paper/DATA/YEARSAC"))
+end
+
+# download file
+if !isfile(file1) | !isfile(file2)
+    zenodourl = "https://zenodo.org/record/3823283/files/"
+
+    dlpath1 = joinpath(zenodourl,basename(file1) * "?download=1")
+    dlpath2 = joinpath(zenodourl,basename(file2) * "?download=1")
+    outpath1 = joinpath(expanduser("~/SeisNoise_paper/DATA/YEARSAC"), file1)
+    outpath2 = joinpath(expanduser("~/SeisNoise_paper/DATA/YEARSAC"), file2)
+    println("Downloading file $file1, 1 of 2")
+    HTTP.download(dlpath1,outpath1)
+
+    println("Downloading file $file1, 2 of 2")
+    HTTP.download(dlpath2,outpath2)
+end
 
 # function for cross-correlation on the CPU
 function CPU_CC(file1,file2,cc_len,cc_step,fs,freqmin,freqmax,maxlag)
