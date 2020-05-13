@@ -15,4 +15,4 @@ Pkg.add(PackageSpec(name="SeisNoise",rev="master"))
 using Conda
 Conda.add("numpy")
 Conda.add("scipy")
-Conda.add("obspy")
+Conda.add("obspy",channel="conda-forge")
