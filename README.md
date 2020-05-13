@@ -6,7 +6,7 @@ Benchmarking scripts for this paper are stored in the `/src` directory.
 
 StationXML files for the 188 stations used in this paper are stored in `/DATA/XML`.
 
-Waveforms for the 188 stations used in this paper are available on Zenodo. 
+Waveforms for the 188 stations used in this paper are available on [Zenodo](https://zenodo.org/record/3823283). 
 
 # How to Run Benchmarks
 1. Clone this github repository `git clone https://github.com/tclements/SeisNoise_paper.git`.
