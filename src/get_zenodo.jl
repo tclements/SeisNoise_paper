@@ -1,6 +1,6 @@
-# this files downloads files for reproducing from Zenodo
+# this files downloads files for reproducing from Zenodo dataset
+# https://zenodo.org/record/3823283
 using HTTP, DelimitedFiles
-# this script downloads file
 
 zenodo = expanduser("~/SeisNoise_paper/DATA/zenodo.txt")
 files = readdlm(zenodo,String)[:]
