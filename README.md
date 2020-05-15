@@ -10,7 +10,7 @@ Waveforms for the 188 stations used in this paper are available on [Zenodo](http
 
 # How to Run Benchmarks
 1. Clone this github repository `git clone https://github.com/tclements/SeisNoise_paper.git`.
-2. Install Julia 1.4 and required packages using `. SeisNoise_paper/src/install_julia.sh`.
+2. Install Julia 1.4 and required packages using `. SeisNoise_paper/src/install_julia.sh`. (only works for Linux and MacOS). 
 3. Run `julia SeisNoise_paper/src/benchmarking.jl` (Note: This requires an Nvidia GPU for true benchmarking). 
 
 
